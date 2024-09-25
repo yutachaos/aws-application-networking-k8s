@@ -82,7 +82,7 @@ lint: ## Run the golangci-lint only in local machine
 
 .PHONY: test
 test: ## Run tests.
-	go test ./pkg/... -coverprofile coverage.out
+	go test -race ./pkg/... -coverprofile coverage.out
 
 .PHONY: toolchain
 toolchain: ## Install developer toolchain
